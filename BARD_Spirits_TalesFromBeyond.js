@@ -35,7 +35,7 @@ spiritTales = {
 console.log(spiritTales[spiritRoll]);
 
 if (remainingUses > 0) {
-    //todo - fix to reflect proper die.
+    
     if (bardLevel = 0) {
         return;
     } else if (bardLevel < 5) {
