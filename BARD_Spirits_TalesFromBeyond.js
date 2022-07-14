@@ -9,6 +9,7 @@ let chatHTML;
 let bardLevel;
 
 let character = canvas.tokens.controlled;
+
     character.forEach(selected => {
         actor = selected.actor;
         remainingUses = actor.data.data.resources.primary.value;
