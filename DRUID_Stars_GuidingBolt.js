@@ -29,8 +29,8 @@ if (remainingUses > 0) {
 
     // let attackRoll = new Roll(`1d20 + ${profBonus} + ${spellMod}`).evaluate({async: false});
     // let dmgRoll = new Roll(`4d6`).evaluate({async: false}).total;
-    let updatedRemaining = remainingUses - 1
-    actor.update({'data.resources.primary.value' : updatedRemaining})
+    let updatedRemaining = remainingUses - 1;
+    actor.update({'data.resources.primary.value' : updatedRemaining});
 
     let chatHTML = `${actorName} summons the power of the stars and casts Guiding Bolt!<br /><br />
         <b>Attack:</b> <a class="inline-result><i class="fas fa-dice-d20></i>${attackRoll}</a><br />
