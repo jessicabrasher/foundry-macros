@@ -37,7 +37,7 @@ spiritTales = {
 
 if (remainingUses > 0) {
     
-    if (bardLevel = 0) {
+    if (bardLevel == 0) {
         return;
     } else if (bardLevel < 5) {
         spiritRoll = new Roll(`1d6`).evaluate({async: false}).total;
