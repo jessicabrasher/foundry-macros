@@ -1,6 +1,7 @@
 //Tales from Beyond Macro
 
 let actor;
+let actorName;
 let remainingUses;
 let spiritTales
 let spiritRoll;
@@ -12,6 +13,7 @@ let character = canvas.tokens.controlled;
 
     character.forEach(selected => {
         actor = selected.actor;
+        actorName = actor.data.data.name;
         remainingUses = actor.data.data.resources.primary.value;
         bardLevel = actor.data.data.classes.bard.levels;
     });
@@ -32,7 +34,6 @@ spiritTales = {
 }
 
 
-console.log(spiritTales[spiritRoll]);
 
 if (remainingUses > 0) {
     
@@ -52,7 +53,7 @@ if (remainingUses > 0) {
     let updatedRemaining = remainingUses - 1;
     actor.update({'data.resources.primary.value' : updatedRemaining});
 
-    chatHTML = `<b class="fas fa-dice-d20">Tales From Beyond</b><br /><br /><i>Ammonite closes her eyes as whisps of spirit forms emerge from the skull in her hand and encompass her. Her eyes roll back as a disembodied voice begins to tell a tale.</i><br /><br />${spiritFlavor}`
+    chatHTML = `<b class="fas fa-dice-d20">Tales From Beyond</b><br /><br /><i>${actorName} closes her eyes as whisps of spirit forms emerge from the skull in her hand and encompass her. Her eyes roll back as a disembodied voice begins to tell a tale.</i><br /><br />${spiritFlavor}`
 
     ChatMessage.create({
         user: game.user._id,
